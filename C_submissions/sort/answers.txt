@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: Because it was the fastest to execute sorted.txt but the slowest to execute reversed.txt (o(n^2) and omega(n))
+
+sort2 uses: Merge sort
+
+How do you know?: Because it was the fastest at executing random.txt and reversed.txt but slightly slower than sort1 at executing sorted.txt (o(n log n) and omega(n log n))
+
+sort3 uses: Selection sort
+
+How do you know?: Because in the sorted.txt case the algorithm took longer than sort1 and sort2. It also took the same time to run random.txt, reversed.txt and sorted.txt (o(n^2) and omega(n^2))

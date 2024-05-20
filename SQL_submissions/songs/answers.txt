@@ -1,0 +1,16 @@
+1)
+considering:
+- energy as the given intensity of the song,
+- valence as how much happiness the song transmits
+- danceability as how much the song makes you move;
+- the given scores ranging from 0 to 1 where 0 represents a non-danceable song and without energy while 1 a lively song with a lot of energy.
+
+among the 100 songs the average energy is: 0.65906
+among the 100 songs the average valence is: 0.48443
+among the 100 songs the average danceability is: 0.71646
+
+I deduce that these values ​​indicate that the listener prefers loud, upbeat and catchy songs.
+
+2)
+A better method would be to assign songs to different categories based on listening context and listener mood, and then calculate average energy, valence, and danceability values ​​for each category.
+This would provide a more complete picture of the listener's audio aura.

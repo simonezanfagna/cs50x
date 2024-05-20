@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if ownStocks %}
+                {% for stock in ownStocks %}
+                    <tr>
+                        <td class="text-start">{{ stock.symbol }}</td>
+                        <td class="text-end">{{ stock.total_shares }}</td>
+                        <td class="text-end">{{ stock.current_price | usd}}</td>
+                        <td class="text-end">{{ stock.total_current_value | usd}}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td class="text-start" colspan="4">No stocks owned yet.</td>
+                </tr>
+            {% endif %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+                <td class="border-0 text-end">{{cash | usd}}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
+                <td class="border-0 w-bold text-end">{{total | usd}}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+{% endblock %}
